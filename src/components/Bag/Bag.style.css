@@ -1,0 +1,68 @@
+.showBag
+{
+    width: 250px;
+    height: 350px;
+    border: 1px solid;
+    z-index: 99;
+    background-color: white;
+}
+.itemBag
+{
+    position: relative;
+    width: 85%;
+    height: 70%;
+    margin: 0px auto;
+    top: 20px;
+    overflow: scroll;
+}
+.goToCheckout
+{
+    position: relative;
+    width: 85%;
+    height: 15%;
+    margin: 0px auto;
+    background-color: black;
+    top: 30px;
+}
+.checkoutText
+{
+    position: relative;
+    color: white;
+    text-align: center;
+    top: 50%;
+    transform: translate(0,-50%);
+    cursor: pointer;
+    -webkit-user-select: none;   
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.bagItems {
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr;
+    grid-template-rows: 1fr;
+    gap: 10px 10px;
+    margin: 10px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". .";
+}
+.bagImg
+{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 70px;
+    height: 70px;
+}
+.bagItemText
+{
+    position: relative;
+    text-align: left;
+    top: 50%;
+    transform: translate(0,-50%);
+}
+.emptyCart
+{
+    text-align: center;
+}

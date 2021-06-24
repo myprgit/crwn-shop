@@ -1,0 +1,63 @@
+.signinWrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 50px 50px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". .";
+    width: 80%;
+    margin: 0px auto;
+  }
+.signinLeft, .signinRight
+{
+    margin: 0px auto;
+    width: 100%;
+    padding: 30px;
+}
+.inputs
+{
+    width: 100%;
+    height: 30px;
+    border: 0px;
+    border-bottom: 1px solid;
+    margin-top: 50px;
+}
+.inputs:focus-visible
+{
+    outline: none;
+    border-bottom: 3px solid green;
+}
+.btns
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 20px 20px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". .";
+    margin: 0px auto;
+    margin-top: 50px;
+    text-align: center;
+}
+.btn
+{
+    position: relative;
+    color: white;
+    text-align: center;
+    width: 100%;
+    height: 60px;
+    background-color: black;
+    cursor: pointer;
+    -webkit-user-select: none;   
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 0px;
+}
+#google
+{
+    border: 0px;
+    background-color: #4285F4;
+}

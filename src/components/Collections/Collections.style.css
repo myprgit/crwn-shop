@@ -1,0 +1,16 @@
+.itemContainer {
+    display: grid;
+    width: 80%;
+    margin: 0px auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 25px 25px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". . . .";
+    
+}
+.itemsTitle
+{
+    text-align: center;
+}

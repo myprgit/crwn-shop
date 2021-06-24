@@ -1,0 +1,56 @@
+.header
+{
+    height: 100px;
+    width: 80%;
+    margin: 0px auto;
+}
+.logo
+{
+    margin: 10px;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    cursor: pointer;
+}
+.right
+{
+    float: right;
+}
+.right, .rightText, .bag
+{
+    display: inline-block;
+}
+.rightText
+{
+    position: relative;
+    vertical-align: top;
+    transform: translate(0, 70%);
+    margin-right: 15px;
+    cursor: pointer;
+}
+.bag
+{
+    margin: 10px;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    cursor: pointer;
+    -webkit-user-select: none;   
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.itemCount
+{
+    position: relative;
+    margin-top: 75%;
+    transform: translate(0, -75%);
+}
+.bagToCheckout
+{
+    position: absolute;
+    right: 10%;
+    top: 50px;
+    display: none;
+    z-index: 99;
+}

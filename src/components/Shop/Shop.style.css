@@ -1,0 +1,21 @@
+.collectionGrid
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 25px 25px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". . . .";
+    margin-bottom: 30px;
+}
+.collectionContainer
+{
+    width: 80%;
+    margin: 0px auto;
+}
+.collectionTitle
+{
+    font-size: xx-large;
+    font-weight: 700;
+}
