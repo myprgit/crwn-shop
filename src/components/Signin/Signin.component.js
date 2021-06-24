@@ -1,6 +1,7 @@
 import React from 'react'
 import './Signin.style.css';
 import { signInWithGoogle } from '../../firebase/firebase';
+
 const Signin = () => {
     return (
         <div className="container">
