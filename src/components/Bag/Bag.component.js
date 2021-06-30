@@ -17,7 +17,7 @@ const bagOnOff = () => {
 }
 
 const Bag = () => {
-  const state = useSelector(state => state)
+  const state = useSelector(state => state.bag)
   return (
     <div className="showBag">
       <div className="itemBag">

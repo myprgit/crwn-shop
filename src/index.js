@@ -5,24 +5,24 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { createStore } from 'redux';
-import bagReducer from './reducers/bag';
+import allReducers from './reducers';
 import { Provider } from 'react-redux';
 
 
 const persistedState = localStorage.getItem('reduxState')
   ? JSON.parse(localStorage.getItem('reduxState'))
-  : [];
+  : {bag:[],signin:Boolean};
 
-const bagStore = createStore(bagReducer, persistedState);
+const store = createStore(allReducers, persistedState);
 
-bagStore.subscribe(() => {
-  localStorage.setItem('reduxState', JSON.stringify(bagStore.getState()))
+store.subscribe(() => {
+  localStorage.setItem('reduxState', JSON.stringify(store.getState()))
 })
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Provider store={bagStore}>
+      <Provider store={store}>
         <App />
       </Provider>
     </BrowserRouter>

@@ -10,7 +10,7 @@ import {useDispatch} from "react-redux";
 
 const Checkout = () => {
   const dispatch = useDispatch();
-  const state = useSelector(state => state);
+  const state = useSelector(state => state.bag);
   let totalPrice = 0;
   state.forEach(element => {
     let price = element[1] * element[0].price;

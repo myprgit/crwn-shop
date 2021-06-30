@@ -1,12 +1,11 @@
 import React from 'react'
 import './Items.style.css'
-import {useDispatch} from "react-redux";
 import { addToBag } from '../../actions/addToBag';
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 const Items = ({item}) => {
     const dispatch = useDispatch();
-    const state = useSelector(state => state);
+    const state = useSelector(state => state.bag);
     console.log(state);
     return (
         <div key={item.id}>
