@@ -3,6 +3,7 @@ const INIT_STATE = {
   };
   
   const isSignedIn = (state = INIT_STATE, action) => {
+    //functional
     switch (action.type) {
       case "SET_USER":
         return {

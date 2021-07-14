@@ -25,6 +25,7 @@ const Bag = () => {
           (() => {
             if (state.length !== 0)
             {
+              //functional
               return state.map(item => {
                 let data = item[0];
                 let count = item[1];

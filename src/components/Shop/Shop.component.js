@@ -4,7 +4,7 @@ import Items from "../Items/Items.component";
 import "./Shop.style.css";
 const dataArr = Object.values(data);
 
-let getFourRandom = (arr) => {
+export const getFourRandom = (arr) => {
     let loopCount = 4;
     let randomArr = [];
     for (let i = 0; i < loopCount; i++) {
@@ -25,7 +25,9 @@ export class Shop extends Component {
     render() {
         return (
             <div className="collectionContainer">
-                {dataArr.map(collection => <div key={collection.id}>
+                {
+                //functional
+                dataArr.map(collection => <div key={collection.id}>
                     <div className="collectionTitle">
                         {collection.title}
                     </div>
@@ -46,3 +48,4 @@ export class Shop extends Component {
 }
 
 export default Shop;
+

@@ -22,6 +22,7 @@ const bagOnOff = () => {
 const Header = ({ cuser }) => {
   const state = useSelector(state => state.bag)
   let total = 0;
+  //functional
   state.forEach(element => {
     total += element[1];
   });

@@ -6,6 +6,7 @@ function indexOfContainingId(id, arr) {
 }
 
 const bag = (state = [], action) => {
+    //functional
     switch(action.type)
     {
         case "ADD":

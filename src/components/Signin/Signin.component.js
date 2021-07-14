@@ -37,7 +37,7 @@ const signUpSubmitHandler = async (event) => {
     }
 };
 
-const Signin = () => {
+const Signin = ({onSubmitF = submitHandler}) => {
     return (
         <div className="container">
             <div className="signinWrap">
@@ -47,11 +47,11 @@ const Signin = () => {
                         <small>Sign in with your email and password</small>
                     </div>
                     <div className="forms">
-                        <form action="" onSubmit={submitHandler}>
-                            <input type="text" className="inputs" name="email" id="signinEmail" placeholder="email" />
-                            <input type="password" className="inputs" name="password" id="signinPassword" placeholder="password" />
+                        <form action="" onSubmit={onSubmitF}>
+                            <input type="text" className="inputs" aria-label="signinEmail" name="email" id="signinEmail" placeholder="email" />
+                            <input type="password" className="inputs" aria-label="signinPassword" name="password" id="signinPassword" placeholder="password" />
                             <div className="btns">
-                                <button type="submit" className="btn" id="signin">SIGN IN</button>
+                                <button type="submit" aria-label="signin" className="btn" id="signin">SIGN IN</button>
                                 <button type="button" onClick={signInWithGoogle} className="btn" id="google">SIGN IN WITH GOOGLE</button>
                             </div> 
                             

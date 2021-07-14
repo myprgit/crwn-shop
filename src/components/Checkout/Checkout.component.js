@@ -26,7 +26,9 @@ const Checkout = () => {
         <div className="tableTitle">Remove</div>
       </div>
       <div className="tableProducts">
-        {state.map(item => {
+        {
+        //functional
+        state.map(item => {
           let data = item[0];
           let count = item[1];
           return (<div className="productWrap" key={data.id}>

@@ -15,7 +15,9 @@ function Collections (props) {
             <>
                 <h1 className="itemsTitle">{data[collectionPath].title}</h1>
                 <div className="itemContainer">
-                    {data[collectionPath].items.map(item =>
+                    {
+                    //functional
+                    data[collectionPath].items.map(item =>
                         <Items key={item.id} item={item} />
                     )}
                 </div>
