@@ -6,7 +6,6 @@ import { useDispatch, useSelector } from "react-redux";
 const Items = ({item}) => {
     const dispatch = useDispatch();
     const state = useSelector(state => state.bag);
-    console.log(state);
     return (
         <div key={item.id}>
             <div className="itemImg" style={{backgroundImage: `url(${item.imageUrl})`}}>
