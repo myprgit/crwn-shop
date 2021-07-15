@@ -24,6 +24,7 @@ const bag = (state = [], action) => {
                 state[index][1] = state[index][1]-1;
                 if (state[index][1] <= 0)
                 {
+                    //functional
                     state.splice(index,1);
                 }
                 return [...state];
@@ -33,6 +34,7 @@ const bag = (state = [], action) => {
             if (indexOfContainingId(action.payload[0].id, state) !== -1)
             {
                 let index = indexOfContainingId(action.payload[0].id, state);
+                //functional
                 state.splice(index,1);
                 return [...state];
             }

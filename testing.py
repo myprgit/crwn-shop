@@ -5,10 +5,23 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 
+def aspectF(function):
+    def inner():
+        try:
+            return function()
+        except:
+            print("Exception caught")
+
+    return inner
+
+
+
 def allUnique(x):
+    #functional
     seen = set()
     return not any(i in seen or seen.add(i) for i in x)
 
+@aspectF
 def homeScreenTest():
     print("\n--Home screen test--\n")
     try:
@@ -24,6 +37,7 @@ def homeScreenTest():
     except NoSuchElementException:
         return print("✖ Couldn't find an element");
 
+@aspectF
 def algebraShopUniqueTest():
     print("\n--Algebra Shop unique elements test--\n")
     try:
@@ -31,6 +45,7 @@ def algebraShopUniqueTest():
         itemNames = driver.find_elements_by_class_name("itemTexts")
         textList = []
         for texts in itemNames:
+            #functional (append - split)
             textList.append(texts.text.split("\n")[0])
         if allUnique(textList):
             return print("✔ All elemets are unique")
@@ -93,9 +108,11 @@ def checkoutTest():
 
         WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.CSS_SELECTOR, ".tableHead")))
         prices = driver.find_elements_by_css_selector(".price > .productInner")
+        #functional
         totalPriceOnPage = driver.find_element_by_class_name("tableTail").text.split(": ")[1]
 
         for price in prices:
+            #functional
             price = int(price.text.split("€")[0])
             totalPrice += price
         if str(totalPrice)+"€" == totalPriceOnPage:

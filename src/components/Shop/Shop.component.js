@@ -10,6 +10,7 @@ export const getFourRandom = (arr) => {
     for (let i = 0; i < loopCount; i++) {
         let rand = arr[Math.floor(Math.random() * arr.length)];
         if (!randomArr.includes(rand)) {
+            //functional
             randomArr.push(rand);
         }
         else {
